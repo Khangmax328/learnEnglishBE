@@ -12,7 +12,10 @@ const app = express();
 app.use(express.json());
 
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: [
+    'http://localhost:3000',
+    'https://learn-english-fe.vercel.app', 
+  ],
   methods: ['GET','POST','PUT','PATCH','DELETE','OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
