@@ -14,11 +14,13 @@ app.use(express.json());
 app.use(cors({
   origin: [
     'http://localhost:3000',
-    'https://learn-english-fe.vercel.app', 
+    'https://learn-english-fe.vercel.app',
+    'https://learn-english-ej6bk5gil-khangmax328s-projects.vercel.app' 
   ],
   methods: ['GET','POST','PUT','PATCH','DELETE','OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
+
 
 if (!process.env.OPENAI_API_KEY || !process.env.OPENAI_API_KEY.trim()) {
   console.error('Missing OPENAI_API_KEY in .env');
